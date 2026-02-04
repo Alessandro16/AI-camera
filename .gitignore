@@ -1,0 +1,32 @@
+# --- IDE e Editor ---
+.idea/
+.vscode/
+*.swp
+*.iml
+
+# --- Ambienti Virtuali ---
+.venv/
+venv/
+ENV/
+env/
+
+# --- Python Cache ---
+__pycache__/
+*.py[cod]
+*$py.class
+
+# --- Modelli AI (File Pesanti) ---
+# Escludiamo i pesi di YOLO perché sono file binari grandi.
+# Meglio che lo script li scarichi da solo o gestirli tramite LFS.
+*.pt
+*.onnx
+*.engine
+
+# --- Sistema Operativo ---
+.DS_Store
+Thumbs.db
+
+# --- Log e Dati temporanei ---
+*.log
+*.csv
+runs/
