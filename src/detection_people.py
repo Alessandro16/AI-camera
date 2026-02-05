@@ -1,6 +1,6 @@
 import cv2
 import numpy as np
-from sympy.printing.pytorch import torch
+import torch
 
 def yolo_detection(tensor, model, conf=50, iou=0.3):
     result = model(tensor,

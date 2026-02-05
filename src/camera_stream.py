@@ -1,6 +1,6 @@
 import cv2
 
-from detection_people import start_detection
+from src.detection_people import start_detection
 
 def start_stream(model, device):
     # Open the default camera
@@ -8,6 +8,8 @@ def start_stream(model, device):
 
     while True:
         ret, frame = cam.read()
+        # Resize for YOLO
+        frame = cv2.resize(frame, (640, 640))
 
         frame = start_detection(frame, model, device)
 
