@@ -3,10 +3,10 @@ os.environ["YOLO_VERBOSE"] = "False"    # Elimino Data YOLO sulla CLI
 
 from sympy.printing.pytorch import torch
 from ultralytics import YOLO
-from camera_stream import start_stream
+from src.camera_stream import start_stream
 
 def main():
-    # Check for invidia cuda
+    # Check for graphics card invidia
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
     model = YOLO('yolov8s').to(device)
 
